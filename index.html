@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRASSWORKS</title>
+<meta name="description" content="BRASSWORKS — how money works. The mechanism, never the recommendation.">
+<style>
+  :root {
+    --ink: #1C1F24;
+    --bone: #EFEBE3;
+    --brass: #C9A227;
+    --brass-bright: #D9B23A;
+    --rule: rgba(239, 235, 227, 0.14);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--ink);
+    color: var(--bone);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 12vh, 8rem) 1.5rem 4rem;
+  }
+  .mark {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.9rem, 7vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--brass);
+    margin: 0;
+  }
+  .rule { height: 2px; background: var(--brass); width: 4rem; margin: 1.6rem 0 2rem; }
+  .lede { font-size: clamp(1.15rem, 3.5vw, 1.4rem); margin: 0 0 2.5rem; }
+  .lede em { color: var(--brass-bright); font-style: normal; }
+  h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass);
+    margin: 3rem 0 1rem;
+  }
+  p { margin: 0 0 1.1rem; }
+  ul.links { list-style: none; padding: 0; margin: 0; }
+  ul.links li { border-top: 1px solid var(--rule); }
+  ul.links li:last-child { border-bottom: 1px solid var(--rule); }
+  ul.links a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: 0.95rem 0.2rem; color: var(--bone); text-decoration: none;
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.98rem;
+  }
+  ul.links a:hover, ul.links a:focus { color: var(--brass-bright); }
+  ul.links .handle { color: rgba(239, 235, 227, 0.5); font-size: 0.88rem; }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.82rem;
+    color: rgba(239, 235, 227, 0.5);
+  }
+  footer a { color: rgba(239, 235, 227, 0.7); }
+</style>
+</head>
+<body>
+<main>
+  <h1 class="mark">BRASSWORKS</h1>
+  <div class="rule"></div>
+
+  <p class="lede">Short science explainers — <em>drawn from the numbers, not around them.</em></p>
+
+  <p>One idea per video, built from published measurements: why our universe is the size a black
+  hole of its mass would be, how galaxies had already made oxygen when the universe was three
+  hundred million years old, why two good ways of measuring the expansion of the universe give two
+  different answers. Every figure is geometry derived from the source data, and every number is
+  checked against that source before a script is written.</p>
+
+  <h2>Where to watch</h2>
+  <ul class="links">
+    <li><a href="https://www.instagram.com/brassworkshq/">Instagram <span class="handle">@brassworkshq</span></a></li>
+    <li><a href="https://www.youtube.com/@brassworkshq">YouTube <span class="handle">@brassworkshq</span></a></li>
+    <li><a href="https://www.tiktok.com/@brassworkshq">TikTok <span class="handle">@brassworkshq</span></a></li>
+  </ul>
+
+  <h2>About the videos</h2>
+  <p>Every frame is vector geometry, drawn by code from the published figures it depicts and
+  rendered deterministically — there is no stock footage and no generated imagery. The videos carry
+  no audio. Sources are named on screen or in the first comment. Nothing published here is
+  financial, legal or medical advice, and no video recommends a product, a provider or a course of
+  action.</p>
+
+  <footer>
+    <a href="./privacy.html">Privacy policy</a> &nbsp;&middot;&nbsp;
+    <a href="./terms.html">Terms of service</a>
+  </footer>
+</main>
+</body>
+</html>

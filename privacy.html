@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — BRASSWORKS</title>
+<meta name="description" content="Privacy policy for BRASSWORKS and its internal publishing tool.">
+<style>
+  :root {
+    --ink: #1C1F24;
+    --bone: #EFEBE3;
+    --brass: #C9A227;
+    --rule: rgba(239, 235, 227, 0.14);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--ink);
+    color: var(--bone);
+    font: 17px/1.7 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: clamp(2.5rem, 8vh, 5rem) 1.5rem 4rem; }
+  .back {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.8rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brass); text-decoration: none;
+  }
+  h1 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.1rem); font-weight: 700;
+    margin: 1.6rem 0 0.4rem;
+  }
+  .updated {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem;
+    color: rgba(239, 235, 227, 0.5); margin: 0 0 2rem;
+  }
+  h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass);
+    margin: 2.6rem 0 0.8rem;
+  }
+  p, li { margin: 0 0 1rem; }
+  ul { padding-left: 1.2rem; }
+  strong { color: #D9B23A; font-weight: 600; }
+  footer {
+    margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.82rem;
+    color: rgba(239, 235, 227, 0.5);
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">&larr; BRASSWORKS</a>
+  <h1>Privacy policy</h1>
+  <p class="updated">Last updated 21 August 2026</p>
+
+  <p>This policy covers this website and the private publishing tool that BRASSWORKS uses to upload
+  its own videos to its own social accounts.</p>
+
+  <h2>This website</h2>
+  <p>This site is static. It sets no cookies, runs no analytics, embeds no third-party scripts and
+  collects nothing about visitors. There is no account to create and no form to submit.</p>
+
+  <h2>The publishing tool</h2>
+  <p>BRASSWORKS uses an internal command-line tool to upload finished videos to the accounts it
+  owns. The tool is <strong>not offered to anyone else</strong> — it has exactly one user, the
+  operator of BRASSWORKS, acting on their own accounts.</p>
+
+  <ul>
+    <li>It runs locally on the operator's own computer. There is no server, no hosted backend and
+    no database.</li>
+    <li>Authorisation tokens are stored in a file on that computer and nowhere else. They are never
+    transmitted to any party other than the platform that issued them.</li>
+    <li>It reads no personal data of any kind from any third party. It uploads a video file and its
+    caption, and nothing else leaves the machine.</li>
+  </ul>
+
+  <h2>Google API data</h2>
+  <p>The tool requests a single Google scope,
+  <strong>https://www.googleapis.com/auth/youtube.upload</strong>, for the sole purpose of
+  uploading BRASSWORKS videos to the BRASSWORKS YouTube channel. It does not read viewer data,
+  comments, subscriber lists or analytics.</p>
+
+  <p>BRASSWORKS' use of information received from Google APIs adheres to the
+  <strong>Google API Services User Data Policy</strong>, including its Limited Use requirements.
+  Data obtained through those APIs is not transferred to any third party, is not used for
+  advertising, is not sold, and is not read by any human other than the operator.</p>
+
+  <p>Access can be revoked at any time from
+  <strong>myaccount.google.com/permissions</strong>, which immediately and permanently ends the
+  tool's ability to upload.</p>
+
+  <h2>TikTok API</h2>
+  <p>The tool requests four TikTok scopes, and only these:</p>
+  <ul>
+    <li><strong>video.upload</strong> &mdash; place a finished BRASSWORKS video into the BRASSWORKS
+    account's own drafts.</li>
+    <li><strong>video.publish</strong> &mdash; post a finished BRASSWORKS video to the BRASSWORKS
+    account directly, where that permission has been granted.</li>
+    <li><strong>video.list</strong> &mdash; read the public view, like, comment and share counts of
+    BRASSWORKS' own posts, so the operator can see which of their own videos performed.</li>
+    <li><strong>user.info.basic</strong> &mdash; required by TikTok alongside video.list.</li>
+  </ul>
+  <p>All four act on the operator's own account and no other. The tool reads no other user's data,
+  reads no comments, follower lists or messages, and has no ability to act on any account it has
+  not been explicitly authorised for. Tokens stay on the operator's machine. Nothing obtained from
+  TikTok is sold, shared, transferred to any third party, used for advertising, or read by any
+  human other than the operator.</p>
+  <p>Access can be revoked at any time from the account's TikTok settings, which immediately ends
+  the tool's access.</p>
+
+  <h2>Meta APIs</h2>
+  <p>Where the tool connects to Meta platforms the same terms apply: only the scopes needed to
+  place a BRASSWORKS video on a BRASSWORKS account, tokens on the operator's machine, nothing
+  retrieved, retained, sold or shared.</p>
+
+  <h2>Retention</h2>
+  <p>Tokens are held only while they remain valid and are deleted when access is revoked or the
+  tool is uninstalled. The view counts of BRASSWORKS' own posts are stored in a file on the
+  operator's computer so that performance can be compared over time; that file contains no data
+  about any other person, and nothing in it leaves the machine. No other data is retained, because
+  none is collected.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: Direct message <strong>@brassworkshq</strong> on TikTok, Instagram or YouTube.</p>
+
+  <footer>BRASSWORKS &middot; <a href="./" style="color:rgba(239,235,227,0.7)">brassworks</a></footer>
+</main>
+</body>
+</html>

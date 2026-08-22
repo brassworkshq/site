@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authorisation — BRASSWORKS</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --ink:#1C1F24; --bone:#EFEBE3; --brass:#C9A227; --rule:rgba(239,235,227,0.14); }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body {
+    background: var(--ink); color: var(--bone);
+    font: 17px/1.7 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: clamp(2.5rem,8vh,5rem) 1.5rem 4rem; }
+  h1 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.5rem,5vw,2.1rem); font-weight:700; margin:0 0 0.6rem; color: var(--brass);
+  }
+  p { margin: 0 0 1rem; }
+  .url {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.82rem; line-height: 1.5; word-break: break-all;
+    background: rgba(239,235,227,0.06); border: 1px solid var(--rule);
+    border-radius: 6px; padding: 0.9rem 1rem; margin: 0 0 1rem;
+  }
+  button {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    background: var(--brass); color: var(--ink); border: 0; border-radius: 6px;
+    padding: 0.7rem 1.2rem; cursor: pointer;
+  }
+  .note {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem;
+    color: rgba(239,235,227,0.55); margin-top: 2rem;
+    border-top: 1px solid var(--rule); padding-top: 1.2rem;
+  }
+  .bad { color: #E86A5C; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="head">Authorisation</h1>
+  <p id="lede">Copy the whole line below and paste it into the terminal.</p>
+  <div class="url" id="url">…</div>
+  <button id="copy">Copy</button>
+  <p class="note">
+    This page is the registered redirect target for the BRASSWORKS publishing tool. It is static:
+    it sends nothing anywhere, stores nothing, and simply shows you the address you landed on so
+    it can be pasted back into the tool running on your own machine.
+  </p>
+</main>
+<script>
+  // Everything happens in the address bar; this page only makes it easy to copy. Deliberately no
+  // network calls of any kind — an authorisation code is a bearer credential for the next 60
+  // seconds, and a page that phoned one home would be the single worst file in this repository.
+  var here = window.location.href;
+  var q = new URLSearchParams(window.location.search);
+  var err = q.get('error');
+  document.getElementById('url').textContent = here;
+  if (err) {
+    document.getElementById('head').textContent = 'Authorisation failed';
+    document.getElementById('head').className = 'bad';
+    document.getElementById('lede').textContent =
+      err + (q.get('error_description') ? ' — ' + q.get('error_description') : '')
+      + ' · Start over in the terminal.';
+  } else if (!q.get('code')) {
+    document.getElementById('lede').textContent =
+      'No authorisation code in this URL. You probably opened this page directly rather than '
+      + 'arriving from TikTok; nothing is wrong.';
+  }
+  document.getElementById('copy').addEventListener('click', function () {
+    navigator.clipboard.writeText(here).then(function () {
+      document.getElementById('copy').textContent = 'Copied';
+    });
+  });
+</script>
+</body>
+</html>
